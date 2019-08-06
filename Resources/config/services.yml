@@ -1,0 +1,45 @@
+
+parameters:
+    kalamu_cms.element.cms.wysiwyg.template: '@@KalamuDefaultBootstrapElements/Element/wysiwyg.html.twig'
+    kalamu_cms.element.cms.image.template: '@@KalamuDefaultBootstrapElements/Element/image.html.twig'
+    kalamu_cms.element.cms.youtube.template: '@@KalamuDefaultBootstrapElements/Element/youtube.html.twig'
+    kalamu_cms.element.cms.menu.template: '@@KalamuDefaultBootstrapElements/Element/menu.html.twig'
+    kalamu_cms.element.cms.google_map.template: '@@KalamuDefaultBootstrapElements/Element/google_map.html.twig'
+    kalamu_cms.element.cms.section_standard.template: '@@KalamuDefaultBootstrapElements/Section/section_standard.html.twig'
+
+services:
+    kalamu_cms.element.cms.wysiwyg:
+        class: Kalamu\DefaultBootstrapElementsBundle\Element\WysiwygElement
+        arguments: ['%kalamu_cms.element.cms.wysiwyg.template%' ]
+        tags:
+            - { name: dashboard.widget }
+
+    kalamu_cms.element.cms.image:
+        class: Kalamu\DefaultBootstrapElementsBundle\Element\ImageElement
+        arguments: ['%kalamu_cms.element.cms.image.template%']
+        tags:
+            - { name: dashboard.widget }
+
+    kalamu_cms.element.cms.youtube:
+        class: Kalamu\DefaultBootstrapElementsBundle\Element\YoutubeElement
+        arguments: ['%kalamu_cms.element.cms.youtube.template%']
+        tags:
+            - { name: dashboard.widget }
+
+
+    kalamu_cms.element.cms.menu:
+        class: Kalamu\DefaultBootstrapElementsBundle\Element\MenuElement
+        arguments: ['%kalamu_cms.element.cms.menu.template%']
+        tags:
+            - { name: dashboard.widget }
+
+
+    kalamu_cms.element.cms.google_map:
+        class: Kalamu\DefaultBootstrapElementsBundle\Element\GoogleMapElement
+        arguments: ['%kalamu_cms.element.cms.google_map.template%']
+        tags:
+            - { name: dashboard.widget }
+
+    kalamu_cms.element.cms.section_standard:
+        class: Kalamu\DefaultBootstrapElementsBundle\Section\SectionStandard
+        arguments: ['%kalamu_cms.element.cms.section_standard.template%']
