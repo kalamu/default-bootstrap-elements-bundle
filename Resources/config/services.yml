@@ -5,6 +5,7 @@ parameters:
     kalamu_cms.element.cms.youtube.template: '@@KalamuDefaultBootstrapElements/Element/youtube.html.twig'
     kalamu_cms.element.cms.menu.template: '@@KalamuDefaultBootstrapElements/Element/menu.html.twig'
     kalamu_cms.element.cms.google_map.template: '@@KalamuDefaultBootstrapElements/Element/google_map.html.twig'
+    kalamu_cms.element.cms.alert.template: '@@KalamuDefaultBootstrapElements/Element/alert.html.twig'
     kalamu_cms.element.cms.section_standard.template: '@@KalamuDefaultBootstrapElements/Section/section_standard.html.twig'
 
 services:
@@ -26,17 +27,21 @@ services:
         tags:
             - { name: dashboard.widget }
 
-
     kalamu_cms.element.cms.menu:
         class: Kalamu\DefaultBootstrapElementsBundle\Element\MenuElement
         arguments: ['%kalamu_cms.element.cms.menu.template%']
         tags:
             - { name: dashboard.widget }
 
-
     kalamu_cms.element.cms.google_map:
         class: Kalamu\DefaultBootstrapElementsBundle\Element\GoogleMapElement
         arguments: ['%kalamu_cms.element.cms.google_map.template%']
+        tags:
+            - { name: dashboard.widget }
+
+    kalamu_cms.element.cms.alert:
+        class: Kalamu\DefaultBootstrapElementsBundle\Element\AlertElement
+        arguments: [%kalamu_cms.element.cms.alert.template%]
         tags:
             - { name: dashboard.widget }
 
