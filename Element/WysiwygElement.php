@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the kalamu/cms-admin-bundle package.
+ * This file is part of the kalamu/default-bootstrap-elements-bundle package.
  *
  * (c) ETIC Services
  *
