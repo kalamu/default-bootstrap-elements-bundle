@@ -17,7 +17,7 @@
     ],
     "require": {
         "kalamu/cms-admin-bundle": "^1.1.0",
-        "kalamu/cms-dashboard-bundle": "^1.2.0"
+        "kalamu/dashboard-bundle": "^1.2.0"
     },
     "autoload": {
          "psr-4": { "Kalamu\\DefaultBootstrapElementsBundle\\": "" }
