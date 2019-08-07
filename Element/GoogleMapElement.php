@@ -44,7 +44,7 @@ class GoogleMapElement extends AbstractConfigurableElement
         $form->add("zoom", HiddenType::class, array());
 
         $form->add('markers', CollectionType::class, array(
-            'type'          => GoogleMapMarkerType::class,
+            'entry_type'          => GoogleMapMarkerType::class,
             'allow_add'     => true,
             'allow_delete'  => true,
             'delete_empty'  => true
