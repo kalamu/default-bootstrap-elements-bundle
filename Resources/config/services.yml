@@ -41,7 +41,7 @@ services:
 
     kalamu_cms.element.cms.alert:
         class: Kalamu\DefaultBootstrapElementsBundle\Element\AlertElement
-        arguments: [%kalamu_cms.element.cms.alert.template%]
+        arguments: ['%kalamu_cms.element.cms.alert.template%']
         tags:
             - { name: dashboard.widget }
 
